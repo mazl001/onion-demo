@@ -2,7 +2,12 @@
     "name": "mazl/onion",
     "description": "Onion PHP Framework",
     "type": "project",
-    "version": "1.0",
+
+    "keywords" : [
+        "framework",
+        "PHP",
+        "ORM"
+    ],
     
     "require": {
         "php": ">=7.0",
