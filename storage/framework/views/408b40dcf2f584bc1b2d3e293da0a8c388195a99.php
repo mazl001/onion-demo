@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><?php echo $__env->yieldContent('title'); ?></title>
+<meta charset="utf-8">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushPhp.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreDefault.min.css">
+<link type="text/css" rel="stylesheet" href="/static/css/public.css">
+
+<script type="text/javascript">
+     SyntaxHighlighter.all();
+</script>
+
+<?php $__env->startSection('head'); ?>
+<?php echo $__env->yieldSection(); ?>
+</head>
+<body>
+
+<div class="container">
+	<h2>Onion - PHP 框架</h2>
+	<nav class="nav nav5">
+		<ul>
+			<li>
+				<a href="#">系统架构</a>
+				<ul>
+					<li><a href="<?php echo e(route('framework:container')); ?>">容器和依赖注入</a></li>
+					<li><a href="<?php echo e(route('framework:service')); ?>">服务提供者</a></li>
+					<li><a href="<?php echo e(route('framework:middleware')); ?>">中间件</a></li>
+					<li><a href="<?php echo e(route('framework:event')); ?>">事件机制</a></li>
+					<li><a href="<?php echo e(route('framework:facade')); ?>">Facade</a></li>
+					<li><a href="<?php echo e(route('framework:router')); ?>">路由搜索、分组</a></li>
+					<li><a href="<?php echo e(route('framework:database:logic')); ?>">数据库复杂逻辑条件解析</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">开发文档</a>
+				<ul>
+					<li><a href="<?php echo e(route('doc:router')); ?>">路由</a></li>
+					<li><a href="<?php echo e(route('doc:middleware')); ?>">中间件</a></li>
+					<li><a href="<?php echo e(route('doc:event')); ?>">事件</a></li>
+					<li><a href="<?php echo e(route('doc:request')); ?>">请求</a></li>
+					<li><a href="<?php echo e(route('doc:response')); ?>">响应</a></li>
+					<li><a href="<?php echo e(route('doc:cookie')); ?>">Cookie</a></li>
+					<li><a href="<?php echo e(route('doc:session')); ?>">Session</a></li>
+					<li><a href="<?php echo e(route('doc:redis')); ?>">Redis</a></li>
+					<li><a href="<?php echo e(route('doc:view')); ?>">视图</a></li>
+					<li><a href="<?php echo e(route('doc:encrypter')); ?>">加密 / 解密</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">数据库文档</a>
+				<ul>
+					<li><a href="<?php echo e(route('doc:database:model')); ?>">模型</a></li>
+					<li><a href="<?php echo e(route('doc:database:tf')); ?>">表名 / 字段</a></li>
+					<li><a href="<?php echo e(route('doc:database:general')); ?>">增删改查</a></li>
+					<li><a href="<?php echo e(route('doc:database:query')); ?>">构造查询条件</a></li>
+					<li><a href="<?php echo e(route('doc:database:join')); ?>">多表连接</a></li>
+					<li><a href="<?php echo e(route('doc:database:debug')); ?>">构造 / 获取SQL语句</a></li>
+					<li><a href="<?php echo e(route('doc:database:transacation')); ?>">事务操作</a></li>
+					<li><a href="<?php echo e(route('doc:database:event')); ?>">监听数据库操作</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">分布式数据库</a>
+				<ul>
+					<li><a href="<?php echo e(route('doc:database:singleServer')); ?>">单台服务器</a></li>
+					<li><a href="<?php echo e(route('doc:database:rwSeparation')); ?>">一主库多备库</a></li>
+					<li><a href="<?php echo e(route('doc:database:verticalSharding')); ?>">数据分片: 垂直切分</a></li>
+					<li><a href="<?php echo e(route('doc:database:horizontalSharding')); ?>">数据分片: 水平切分</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">安装配置</a>
+				<ul>
+					<li><a href="<?php echo e(route('doc:installation:quickStart')); ?>">快速开始</a></li>
+					<li><a href="<?php echo e(route('doc:installation:configuration')); ?>">基本配置</a></li>
+					<li><a href="<?php echo e(route('doc:installation:redisConfiguration')); ?>">Redis配置</a></li>
+					<li><a href="<?php echo e(route('doc:installation:sessionConfiguration')); ?>">Session配置</a></li>
+					<li><a href="<?php echo e(route('doc:installation:debug')); ?>">调试模式</a></li>
+					<li><a href="<?php echo e(route('doc:installation:cli')); ?>">命令行模式</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">在线交流</a>
+				<ul>
+					<li><a href="<?php echo e(route('chatroom')); ?>">在线交流</a></li>
+					<li><a href="<?php echo e(route('doc:about')); ?>">关于我们</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<?php $__env->startSection('content'); ?>
+	<?php echo $__env->yieldSection(); ?>
+</div>
+</body>
+</html>
