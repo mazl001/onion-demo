@@ -73,4 +73,7 @@ Route::group(['namespace' => 'Home'], function() {
 
 	//使用到演示文件列表
 	Route::get('demoFileList', 'DemoController@demoFileList');
+
+
+	Route::get('chatroom', 'WebsocketController@client')->name('chatroom');
 });

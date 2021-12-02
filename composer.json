@@ -23,7 +23,7 @@
         },
 
         "files": [
-            "core/Onion/helpers.php",
+            "core/onion/helpers.php",
             "app/function.php"
         ]
     },

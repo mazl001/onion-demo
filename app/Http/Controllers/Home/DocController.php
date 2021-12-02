@@ -222,6 +222,12 @@ class DocController {
 	 	return view('home.doc.installation.debug');
 	}
 
+	/**
+	 * 开发文档: 命令行模式
+	 */	 
+	public function cli() {
+	 	return view('home.doc.installation.cli');
+	}
 
 	/**
 	 * 开发文档: 框架介绍

@@ -55,6 +55,29 @@ class Kernel {
 		return $onion($request);
 	}
 
+	/**
+	 * 命令行模式运行控制器, 不加载 HTTP 中间件
+	 *
+	 * @param string $action   运行的控制器动作, 格式: controller@action
+	 */
+	public function cli($action) {
+
+		if (strpos('app\\Http\\Controllers\\', $action) === false) {
+			$action = 'app\\Http\\Controllers\\'.$action;
+		}
+		
+		list($controller, $method) = explode('@', $action);
+
+		//应用初始化
+		$this->application->bootstrap();
+
+		$instance = $this->application->getNewInstanceByClassName($controller);
+		$response = $this->application->invokeMethod($instance, $method);
+
+		return $response;	
+	}
+
+
 	public function dispatchToRoute(RouteItem $route) {
 		return function($request) use ($route) {
 			return $route->run($request, $this->application);

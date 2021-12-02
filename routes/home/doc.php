@@ -95,6 +95,9 @@ Route::group(['namespace' => 'Home', 'prefix' => 'doc', 'name' => 'doc:'], funct
 
 		//调试信息
 		Route::get('debug', 'DocController@debug')->name('debug');
+
+		//命令行模式
+		Route::get('cli', 'DocController@cli')->name('cli');
 	});
 
 

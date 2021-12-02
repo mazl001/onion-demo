@@ -13,6 +13,8 @@
      SyntaxHighlighter.all();
 </script>
 
+@section('head')
+@show
 </head>
 <body>
 
@@ -77,12 +79,14 @@
 					<li><a href="{{ route('doc:installation:redisConfiguration') }}">Redis配置</a></li>
 					<li><a href="{{ route('doc:installation:sessionConfiguration') }}">Session配置</a></li>
 					<li><a href="{{ route('doc:installation:debug') }}">调试模式</a></li>
+					<li><a href="{{ route('doc:installation:cli') }}">命令行模式</a></li>
 				</ul>
 			</li>
 			<li>
-				<a href="#">关于我们</a>
+				<a href="#">在线交流</a>
 				<ul>
-					<li><a href="{{ route('doc:about') }}">框架介绍</a></li>
+					<li><a href="{{ route('chatroom') }}">在线交流</a></li>
+					<li><a href="{{ route('doc:about') }}">关于我们</a></li>
 				</ul>
 			</li>
 		</ul>

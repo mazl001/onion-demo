@@ -22,4 +22,5 @@ return [
     |--------------------------------------------------------------------------
     */
     app\Providers\TestServiceProvider::class,
+    app\Providers\WebsocketServiceProvider::class,
 ];

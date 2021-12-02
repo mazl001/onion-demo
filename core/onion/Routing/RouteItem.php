@@ -219,7 +219,7 @@ class RouteItem {
 		} else {
 			list($class, $method) = explode('@', $uses);
 			$instance = $application->getNewInstanceByClassName($class);
-			$response = $application->invokeMethod($instance, $method, $this->parameters);;
+			$response = $application->invokeMethod($instance, $method, $this->parameters);
 		}
 
 		//转化为Response对象
